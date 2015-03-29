@@ -224,4 +224,7 @@
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
     <string name="application_icon">Application icon</string>
+
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
 </resources>
