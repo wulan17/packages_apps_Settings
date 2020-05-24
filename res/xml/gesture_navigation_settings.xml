@@ -23,13 +23,24 @@
     android:title="@string/gesture_settings_activity_title"
     settings:keywords="@string/keywords_gesture_navigation_settings">
 
-    <com.afterlife.support.preference.SystemSettingListPreference
-        android:key="navigation_bar_ime_space"
-        android:title="@string/navigation_bar_ime_space_title"
-        android:summary="@string/navigation_bar_ime_space_summary"
-        android:entries="@array/navigation_bar_ime_space_entries"
-        android:entryValues="@array/navigation_bar_ime_space_values"
-        android:defaultValue="0" />
+    <PreferenceCategory
+        android:title="@string/navbar_category">
+
+	<com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="navigation_bar_hint"
+            android:title="@string/hide_navbar_gesture_bar_title"
+            android:summary="@string/hide_navbar_gesture_bar_summary"
+            android:defaultValue="false" />
+
+    	<com.afterlife.support.preference.SystemSettingListPreference
+            android:key="navigation_bar_ime_space"
+            android:title="@string/navigation_bar_ime_space_title"
+            android:summary="@string/navigation_bar_ime_space_summary"
+            android:entries="@array/navigation_bar_ime_space_entries"
+            android:entryValues="@array/navigation_bar_ime_space_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="assistant_gesture_category"
