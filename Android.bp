@@ -126,6 +126,7 @@ android_library {
         "kotlin-stdlib",
         "VendorSupport-Libs",
         "glide",
+        "androidx.dynamicanimation_dynamicanimation",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],
