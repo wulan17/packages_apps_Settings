@@ -404,7 +404,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         Context mContext = getContext();
-        if (com.android.internal.util.blaze.BlazeUtils.isPackageInstalled(mContext,"com.android.vending")) {
+        if (com.android.internal.util.afterlife.AfterlifeUtils.isPackageInstalled(mContext,"com.android.vending")) {
             menu.add(0, PLAY_STORE, 0, R.string.app_play_store)
                     .setIcon(R.drawable.ic_menu_play_store)
                     .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
@@ -446,8 +446,10 @@ public class AppInfoDashboardFragment extends DashboardFragment
         }
         // Utils.isSystemPackage doesn't include all aosp built apps, like Contacts etc. Add them
         // and grab the Google Play Store itself (com.android.vending) in the process
-        menu.findItem(PLAY_STORE).setVisible(!Utils.isSystemPackage(getContext().getResources(), mPm, mPackageInfo)
+        if (com.android.internal.util.afterlife.AfterlifeUtils.isPackageInstalled(getContext(),"com.android.vending")) {
+            menu.findItem(PLAY_STORE).setVisible(!Utils.isSystemPackage(getContext().getResources(), mPm, mPackageInfo)
                 && !isAospOrStore(mAppEntry.info.packageName));
+        }
     }
 
     /** Shows the lock screen if the keyguard is secured. */
