@@ -12648,4 +12648,8 @@
     <string name="content_protection_preference_subpage_summary"></string>
     <!-- Default information at the bottom of the subpage of content protection settings. Will be overlaid by OEM. -->
     <string name="content_protection_preference_subpage_info"></string>
+
+    <!-- Game Space -->
+    <string name="game_space_title">Game Space</string>
+    <string name="game_space_summary">Enhance your gaming experience</string>
 </resources>
