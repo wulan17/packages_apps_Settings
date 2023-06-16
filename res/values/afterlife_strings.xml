@@ -251,4 +251,8 @@
     <string name="charging_control_target_time_summary">Battery will be fully charged by %s</string>
     <string name="charging_control_limit_title">Limit</string>
     <string name="reset">Reset</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>
