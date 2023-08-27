@@ -45,6 +45,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.core.InstrumentedPreferenceFragment;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
+import com.android.settings.search.actionbar.SearchMenuController;
 import com.android.settings.support.actionbar.HelpResourceProvider;
 import com.android.settings.widget.HighlightablePreferenceGroupAdapter;
 import com.android.settings.widget.LoadingViewController;
@@ -136,6 +137,9 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
+        //Add Search Action to Base Settings Activity
+        SearchMenuController.init(this /* host */);
 
         mDevicePolicyManager = getContext().getSystemService(DevicePolicyManager.class);
         if (icicle != null) {
