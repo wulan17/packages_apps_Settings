@@ -24,6 +24,11 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.view.View;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -71,6 +76,28 @@ public class MyDeviceInfoFragment extends DashboardFragment
     public int getMetricsCategory() {
         return SettingsEnums.DEVICEINFO;
     }
+
+     @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
+                savedInstanceState);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+		layoutManager.setSpanSizeLookup(new AfterlifeSpanSizeOP());
+		recyclerView.setLayoutManager(layoutManager);
+        return recyclerView;
+    }
+
+    class AfterlifeSpanSizeOP extends GridLayoutManager.SpanSizeLookup {
+		@Override
+		public int getSpanSize(int position) {
+		    if (position == 1 || position == 2) {
+				return 1;
+			} else {
+				return 2;
+			}
+		}
+	}
 
     @Override
     public int getHelpResource() {
