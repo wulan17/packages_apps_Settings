@@ -5069,5 +5069,17 @@
             </intent-filter>
         </receiver>
 
+        <!-- about afterlife -->
+        <activity android:name="com.afterlife.afterlab.fragments.team.AboutAfterLife"
+                  android:taskAffinity=""
+                  android:parentActivityName="com.android.settings"
+                  android:exported="true"
+                  android:theme="@style/AboutAfterlife"
+                  android:label="@string/about_afterlife_title" >
+            <intent-filter>
+                <action android:name="com.afterlife.afterlab.fragments.team.AboutAfterLife" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
