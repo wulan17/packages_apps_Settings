@@ -1,140 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright (C) 2019 The Android Open Source Project
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  -->
 
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/about_settings"
-    settings:keywords="@string/keywords_android_version">
+    android:title=" "
+    app:keywords="@string/keywords_android_version"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- AfterLife logo -->
-    <com.android.settingslib.widget.LayoutPreference 
-        android:layout="@layout/afterlife_logo" 
-        android:clickable="true" 
-        android:key="afterlife_logo" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeLogoController" />
-
-    <!-- Android version -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="os_firmware_version"
-        android:title="@string/firmware_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:searchable="false"
-        settings:cardType="topLeft"
-		settings:cardRight="false"
-		settings:showDividerRight="true"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
-
-    <!-- AfterLife version -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="afx_version"
-        android:title="@string/afterlife_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:searchable="false"
-        settings:cardType="topRight"
-		settings:cardRight="true"
-		settings:showDividerRight="false"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.AfxVersionDetailPreferenceController"/>
-
-    <!-- Security patch -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="security_key"
-        android:title="@string/security_patch"
-        settings:enableCopying="true"
-        settings:cardType="middle"
-		settings:cardRight="false"
-		settings:showDividerRight="true"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
-
-    <!-- Mainline module version -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="module_version"
-        android:title="@string/module_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:cardType="middle"
-		settings:cardRight="true"
-		settings:showDividerRight="false"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/>
-
-    <!-- Kernel -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="kernel_version"
-        android:title="@string/kernel_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:cardType="middle"
-		settings:cardRight="false"
-		settings:showDividerRight="true"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
-
-    <!-- Build -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="os_build_number"
-        android:title="@string/build_number"
-        android:summary="@string/summary_placeholder"
-        android:selectable="false"
-        settings:enableCopying="true"
-        settings:cardType="middle"
-		settings:cardRight="true"
-		settings:showDividerRight="false"
-		settings:showDividerBottom="true" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"/>
-
-    <!-- Baseband -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="base_band"
-        android:title="@string/baseband_version"
-        android:summary="@string/summary_placeholder"
-        android:selectable="false"
-        settings:enableCopying="true"
-        settings:cardType="botLeft"
-		settings:cardRight="false"
-		settings:cardBottom="true"
-		settings:showDividerRight="true"
-		settings:showDividerBottom="false" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"/>
-
-    <!-- SELinux -->
-    <declan.prjct.settings.aboutphone.AfterlifePreference
-        android:key="selinux_status"
-        android:title="@string/selinux_status"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="false"
-        settings:cardType="botRight"
-		settings:cardRight="true"
-		settings:cardBottom="true"
-		settings:showDividerRight="false"
-		settings:showDividerBottom="false" 
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SelinuxStatusPreferenceController"/>
+    <com.android.settingslib.widget.LayoutPreference
+        android:clickable="true"
+        android:layout="@layout/afterlife_logo"
+        android:key="afterlife_logo"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeLogoController"/>
 
     <!-- AfterLife Maintainer  -->
     <com.android.settingslib.widget.LayoutPreference
-        android:key="afterlife_maintainer"
-        android:layout="@layout/afterlife_maintainer" 
+        android:layout="@layout/afterlife_maintainer"
         android:title="@string/afterlife_maintainer"
+        android:key="afterlife_maintainer"
         android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeMaintainerController"/>
+        app:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeMaintainerController"
+        app:enableCopying="true"/>
+
+    <!-- Android version -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/firmware_version"
+        android:key="os_firmware_version"
+        android:summary="@string/summary_placeholder"
+        app:cardRight="false"
+        app:cardType="topLeft"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"
+        app:enableCopying="true"
+        app:searchable="false"
+        app:showDividerBottom="true"
+        app:showDividerRight="true"/>
+
+    <!-- AfterLife version -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/afterlife_version"
+        android:key="afx_version"
+        android:summary="@string/summary_placeholder"
+        app:cardRight="true"
+        app:cardType="topRight"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.AfxVersionDetailPreferenceController"
+        app:enableCopying="true"
+        app:searchable="false"
+        app:showDividerBottom="true"
+        app:showDividerRight="false"/>
+
+    <!-- Security patch -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/security_patch"
+        android:key="security_key"
+        app:cardRight="false"
+        app:cardType="middle"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"
+        app:enableCopying="true"
+        app:showDividerBottom="true"
+        app:showDividerRight="true"/>
+
+    <!-- Mainline module version -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/module_version"
+        android:key="module_version"
+        android:summary="@string/summary_placeholder"
+        app:cardRight="true"
+        app:cardType="middle"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"
+        app:enableCopying="true"
+        app:showDividerBottom="true"
+        app:showDividerRight="false"/>
+
+    <!-- Kernel -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/kernel_version"
+        android:key="kernel_version"
+        android:summary="@string/summary_placeholder"
+        app:cardRight="false"
+        app:cardType="middle"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"
+        app:enableCopying="true"
+        app:showDividerBottom="true"
+        app:showDividerRight="true"/>
+
+    <!-- Build -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/build_number"
+        android:selectable="false"
+        android:key="os_build_number"
+        android:summary="@string/summary_placeholder"
+        app:cardRight="true"
+        app:cardType="middle"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"
+        app:enableCopying="true"
+        app:showDividerBottom="true"
+        app:showDividerRight="false"/>
+
+    <!-- Baseband -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/baseband_version"
+        android:selectable="false"
+        android:key="base_band"
+        android:summary="@string/summary_placeholder"
+        app:cardBottom="true"
+        app:cardRight="false"
+        app:cardType="botLeft"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"
+        app:enableCopying="true"
+        app:showDividerBottom="false"
+        app:showDividerRight="true"/>
+
+    <!-- SELinux -->
+    <declan.prjct.settings.aboutphone.AfterlifePreference
+        android:title="@string/selinux_status"
+        android:key="selinux_status"
+        android:summary="@string/summary_placeholder"
+        app:cardBottom="true"
+        app:cardRight="true"
+        app:cardType="botRight"
+        app:controller="com.android.settings.deviceinfo.firmwareversion.SelinuxStatusPreferenceController"
+        app:enableCopying="false"
+        app:showDividerBottom="false"
+        app:showDividerRight="false"/>
 </PreferenceScreen>

@@ -22,6 +22,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.TypedValue;
+import android.content.res.Resources;
 import androidx.annotation.ColorInt;
 import java.util.Random;
 
@@ -39,4 +40,19 @@ public class DeclanUtils {
 		ta.recycle();
 		return color;
 	}
+	
+	public static int getLightDarkColor(Context context, int lightColor, int darkColor) {
+        Resources res = context.getResources();
+        return !isThemeDark(context) ? res.getColor(lightColor) : res.getColor(darkColor);
+    }
+    private static Boolean isThemeDark(Context context) {
+        switch (context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                return true;
+            case Configuration.UI_MODE_NIGHT_NO:
+                return false;
+            default:
+                return false;
+        }
+    }
 }

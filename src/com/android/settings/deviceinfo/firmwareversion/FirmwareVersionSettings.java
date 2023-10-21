@@ -57,7 +57,7 @@ public class FirmwareVersionSettings extends DashboardFragment {
     class AfterlifeSpanSizeOP extends GridLayoutManager.SpanSizeLookup {
         @Override
         public int getSpanSize(int position) {
-           if (position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 1) {
+           if (position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 9) {
                 return 1;
             } else {
                 return 2;

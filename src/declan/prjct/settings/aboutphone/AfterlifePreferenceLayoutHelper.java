@@ -138,7 +138,7 @@ public class AfterlifePreferenceLayoutHelper {
 		int rippleColor = DeclanUtils.getColorAttr(mContext, android.R.attr.colorControlHighlight);
 		float radius = DeclanUtils.dpToPx(28);
 		GradientDrawable gd = new GradientDrawable();
-		gd.setColor(DeclanUtils.getColorAttr(mContext, com.android.internal.R.attr.colorSurface));
+		gd.setColor(DeclanUtils.getLightDarkColor(mContext,R.color.card_bg,  R.color.card_bg));
 		if (cardType == 0) {
 			//Top Left//
 			gd.setCornerRadii(new float[]{radius, radius, 0, 0, 0, 0, 0, 0});
