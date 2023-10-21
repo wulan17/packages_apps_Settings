@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright (C) 2023 AfterLife Project
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
 <com.google.android.material.card.MaterialCardView
     android:layout_width="fill_parent"
-    android:layout_height="110.0dip"
-    android:layout_marginVertical="5.0dip"
+    android:layout_height="120.0dip"
     android:layout_marginStart="5.0dip"
     android:layout_marginEnd="16.0dip"
+    android:layout_marginVertical="5.0dip"
     app:cardBackgroundColor="@android:color/system_accent1_100"
     app:cardCornerRadius="19.0dip"
     app:cardElevation="0.0dip"
     app:rippleColor="?android:colorControlHighlight"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-    android:gravity="start"
-    android:orientation="vertical"
-    android:paddingVertical="10.0dip"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:paddingHorizontal="16.0dip">
-        <LinearLayout
-        android:gravity="start|center"
-        android:layout_gravity="start"
-        android:layout_width="38.0dip"
-        android:layout_height="38.0dip">
-       <ImageView
-       android:background="@drawable/adaptive_shape"
-       android:backgroundTint="@android:color/system_accent1_900"
-       android:tint="@android:color/white"
-       android:padding="4dp"
-       android:id="@android:id/icon"
-       android:layout_width="27dp"
-       android:layout_height="27dp" />
-        </LinearLayout>
-        <TextView
-        android:textStyle="bold"
-        android:textSize="18.0sp"
-        android:textColor="@android:color/system_accent1_900"
-        android:id="@android:id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5.0dip"
-        android:layout_marginBottom="2.0dip"
-        android:textAlignment="viewStart" />
-        <TextView
-        android:textSize="14.0sp"
-        android:alpha="0.7"
-        android:textColor="@android:color/system_accent1_900"
-        android:id="@android:id/summary"
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16.0dip"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="viewStart" />
-    </LinearLayout>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@android:id/icon"
+            android:background="@drawable/adaptive_shape"
+            android:padding="4.0dip"
+            android:layout_width="27.0dip"
+            android:layout_height="27.0dip"
+            android:tint="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="@android:color/system_accent1_900"/>
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/system_accent1_900"
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="0.0dip"
+            android:layout_above="@android:id/summary"
+            android:textAlignment="viewStart"/>
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@android:color/system_accent1_900"
+            android:id="@android:id/summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.7"
+            android:textAlignment="viewStart"/>
+    </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
