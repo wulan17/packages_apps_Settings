@@ -131,11 +131,11 @@ public class AfxVersionDetailPreferenceController extends BasePreferenceControll
                 this.mContext.getString(R.string.device_info_default));
         String romVermod = SystemProperties.get(KEY_AFTERLIFE_VERSION_PROP,
                 this.mContext.getString(R.string.device_info_default));
-        String romBuildtype = SystemProperties.get(KEY_AFTERLIFE_BUILDTYPE_PROP,
-                this.mContext.getString(R.string.device_info_default));
-        String romDevice = SystemProperties.get(KEY_AFTERLIFE_DEVICE_PROP,
-                this.mContext.getString(R.string.device_info_default));
-        String shortVersion = romVernumb + " | " + romVermod + " | " + romBuildtype + " | " + romDevice;
+        //String romBuildtype = SystemProperties.get(KEY_AFTERLIFE_BUILDTYPE_PROP,
+                //this.mContext.getString(R.string.device_info_default));
+        //String romDevice = SystemProperties.get(KEY_AFTERLIFE_DEVICE_PROP,
+                //this.mContext.getString(R.string.device_info_default));
+        String shortVersion = romVernumb + " | " + romVermod;
         return shortVersion;
     }
 

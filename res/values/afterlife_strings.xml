@@ -18,7 +18,9 @@
     <string name="device_info_protected_single_press">Tap to show info</string>
 
     <!-- AfterLife Maintainer -->
-    <string name="afterlife_maintainer">Afterlife Keeper</string>
+    <string name="afterlife_maintainer">Keep Alive By</string>
+    <string name="its_official">This devices official supported!</string>
+    <string name="its_unofficial">This devices community supported!</string>
     <string name="maintainer_git_username">null</string>
     <string name="maintainer_tele_username">null</string>
     <string name="maintainer_ig_username">null</string>

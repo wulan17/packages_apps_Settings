@@ -46,7 +46,8 @@ public class afterlifeMaintainerController extends BasePreferenceController
 implements View.OnTouchListener {
 
     Context mContext;
-    String mIgLink, mTeleLink, mFbLink, mGitLink;
+    String mIgLink, mTeleLink, mFbLink, mGitLink, mTextOfficial, mTextUnofficial;
+    Drawable mIconOfficial, mIconUnofficial;
 
     public afterlifeMaintainerController(Context context, String key) {
         super(context, key);
@@ -81,6 +82,17 @@ implements View.OnTouchListener {
         }
 
     }
+    
+    private boolean getStatus() {
+       boolean isOfficial = false;
+        if (getSystemProperty("ro.afterlife.releasetype").equals("OFFICIAL")) {
+            isOfficial = true;
+        } else {
+            isOfficial = false;
+        }
+        return isOfficial;
+
+    }
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
@@ -91,8 +103,26 @@ implements View.OnTouchListener {
                                                                       getIdentifier("id/maintainer_name", null, mContext.getPackageName()));
         final TextView mDeviceModel = mPreference.findViewById(mContext.getResources().
                                                                    getIdentifier("id/device_model", null, mContext.getPackageName()));
+        final TextView mStatusText = mPreference.findViewById(mContext.getResources().
+                                                                   getIdentifier("id/status_text", null, mContext.getPackageName()));
+        final ImageView mStatusIcon = mPreference.findViewById(mContext.getResources().
+                                                                    getIdentifier("id/status_icon", null, mContext.getPackageName()));
+                                                                    
+        mTextOfficial = mContext.getString(mContext.getResources().getIdentifier("string/its_official",null, mContext.getPackageName()));
+        mTextUnofficial = mContext.getString(mContext.getResources().getIdentifier("string/its_unofficial",null, mContext.getPackageName()));
+        mIconOfficial = mContext.getDrawable(mContext.getResources().getIdentifier("drawable/ic_official",null, mContext.getPackageName()));
+        mIconUnofficial = mContext.getDrawable(mContext.getResources().getIdentifier("drawable/ic_unofficial",null, mContext.getPackageName()));
+                                                       
         mDeviceModel.setText("Device : " + getPhoneModel());
         setInfo("ro.afterlife.maintainer", mMaintainerName);
+        if (getStatus()) {
+        	mStatusText.setText(mTextOfficial);
+            mStatusIcon.setImageDrawable(mIconOfficial);
+        } else {
+        	mStatusText.setText(mTextUnofficial);
+            mStatusIcon.setImageDrawable(mIconUnofficial);
+        }
+        
         final ImageView mBtnExpanded = mPreference.findViewById(mContext.getResources().
                                                                     getIdentifier("id/expand_button", null, mContext.getPackageName()));
         final LinearLayout mDetail = mPreference.findViewById(mContext.getResources().
