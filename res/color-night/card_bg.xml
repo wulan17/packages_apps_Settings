@@ -13,8 +13,8 @@
 -->
 
 <selector
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
     <item
-        android:color="@android:color/system_neutral2_600"
-        android:alpha="0.2" />
+        android:color="#FF1B1D1F" />
 </selector>
