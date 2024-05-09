@@ -480,4 +480,7 @@ public class Settings extends SettingsActivity {
     public static class PreviouslyConnectedDeviceActivity extends SettingsActivity { /* empty */ }
 
     public static class ScreenTimeoutActivity extends SettingsActivity { /* empty */ }
+
+    // AfterLab Additions.
+    public static class AfterlabSettingsActivity extends SettingsActivity {}
 }

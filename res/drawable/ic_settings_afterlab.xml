@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+		android:width="24.0dp"
+		android:height="24.0dp"
+		android:viewportWidth="24.0"
+		android:viewportHeight="24.0"
+		android:tint="@color/battery_usage_system_icon_color">
+	<path
+		android:fillColor="#00FFFFFF"
+		android:strokeColor="#FF000000"
+		android:strokeWidth="1.7932804"
+		android:strokeLineJoin="round"
+		android:fillType="nonZero"
+		android:strokeLineCap="square"
+		android:pathData="M3.70,7.23L12.13,2.43L20.35,7.39L20.38,17.10L12.04,21.85L3.72,16.97L3.70,7.23z"/>
+	<path
+		android:fillColor="#FF000000"
+		android:strokeLineJoin="round"
+		android:fillType="nonZero"
+		android:strokeLineCap="square"
+		android:pathData="M0.48,13.02L8.29,6.97L9.03,6.97L15.71,12.03L15.68,13.75L14.89,13.75L8.71,9.03L1.25,13.85L0.47,13.81L0.48,13.02z"/>
+	<path
+		android:fillColor="#FF000000"
+		android:strokeLineJoin="round"
+		android:fillType="nonZero"
+		android:strokeLineCap="square"
+		android:pathData="M23.45,11.15L15.64,17.20L14.91,17.20L8.29,12.14L8.26,10.42L9.04,10.42L15.24,14.94L22.69,10.32L23.46,10.35L23.45,11.15z"/>
+</vector>
