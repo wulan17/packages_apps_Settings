@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title=" "
-    app:keywords="@string/keywords_android_version"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    app:keywords="@string/keywords_android_version">
 
     <!-- AfterLife logo -->
     <com.android.settingslib.widget.LayoutPreference
