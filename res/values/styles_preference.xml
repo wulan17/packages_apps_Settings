@@ -75,4 +75,15 @@
         <item name="layout">@layout/vpn_app_management_preference</item>
     </style>
 
+    <style name="declan_text_primary">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+    <style name="declan_text_secondary">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
 </resources>

@@ -12,9 +12,16 @@
 -->
 
 <resources>
-    <!-- Fingerprint -->
-    <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
 
-    <dimen name="al_card_radius_big">20dp</dimen>
-    <dimen name="al_card_radius">0dp</dimen>
+    <attr name="cardType">
+		<enum name="topLeft" value="0" />
+		<enum name="topRight" value="1" />
+		<enum name="middle" value="2" />
+		<enum name="botLeft" value="3" />
+		<enum name="botRight" value ="4" />
+	</attr>
+	<attr name="cardRight" format="boolean" />
+	<attr name="cardBottom" format="boolean" />
+	<attr name="showDividerRight" format="boolean" />
+	<attr name="showDividerBottom" format="boolean" />
 </resources>

@@ -19,8 +19,13 @@ package com.android.settings.deviceinfo.firmwareversion;
 import android.app.settings.SettingsEnums;
 
 import com.android.settings.R;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
@@ -34,6 +39,30 @@ public class FirmwareVersionSettings extends DashboardFragment {
     @Override
     protected String getLogTag() {
         return "FirmwareVersionSettings";
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+                                             Bundle savedInstanceState) {
+        RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
+                                                               savedInstanceState);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+        layoutManager.setSpanSizeLookup(new AfterlifeSpanSizeOP());
+        recyclerView.setLayoutManager(layoutManager);
+        layoutManager.setAutoMeasureEnabled(true);
+        layoutManager.setItemPrefetchEnabled(true);
+        return recyclerView;
+    }
+
+    class AfterlifeSpanSizeOP extends GridLayoutManager.SpanSizeLookup {
+        @Override
+        public int getSpanSize(int position) {
+           if (position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 1) {
+                return 1;
+            } else {
+                return 2;
+            }
+        }
     }
 
     @Override

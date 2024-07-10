@@ -74,6 +74,17 @@
         <attr name="forWork" format="boolean" />
         <!-- Identifier for highlighting the menu preference on 2-pane -->
         <attr name="highlightableMenuKey" format="string" />
+    
+    <!--attr name="cardRight" format="boolean" /
+        <attr name="showDividerRight" format="boolean" /
+        <attr name="showDividerBottom" format="boolean" /-->
+        <!--attr name="cardType"-->
+		    <!--enum name="topLeft" value="0" /-->
+		    <!--enum name="topRight" value="1" /-->
+		    <!--enum name="middle" value="2" /-->
+		    <!--enum name="botLeft" value="3" /-->
+		    <!--enum name="botRight" value ="4" /-->
+	    <!--/attr-->
     </declare-styleable>
 
     <declare-styleable name="PreferenceScreen">
