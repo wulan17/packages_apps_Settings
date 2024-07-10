@@ -56,7 +56,6 @@
         settings:layout="@layout/afterlab_cardview_top_switch" />
 
     <Preference
-        android:icon="@drawable/ic_settings_wireless"
         android:title="Connectivity"
         android:key="internet_settings"
         android:summary="@string/summary_placeholder"
@@ -65,7 +64,6 @@
         settings:layout="@layout/afterlab_cardview_middle" />
 
     <Preference
-        android:icon="@drawable/ic_devices_other"
         android:title="Portable hotspot"
         android:key="tether_settings"
         android:summary="@string/summary_placeholder"
@@ -74,7 +72,6 @@
         settings:layout="@layout/afterlab_cardview_middle" />
 
     <Preference
-        android:icon="@drawable/ic_devices_other"
         android:title="@string/connected_devices_dashboard_title"
         android:key="top_level_connected_devices"
         android:order="-140"
@@ -83,8 +80,7 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:layout="@layout/afterlab_cardview_bottom" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_apps"
+    <Preference
         android:title="@string/apps_dashboard_title"
         android:key="top_level_apps"
         android:order="-130"
@@ -92,8 +88,7 @@
         settings:highlightableMenuKey="@string/menu_key_apps"
         settings:layout="@layout/afterlab_cardview_top" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_notifications"
+    <Preference
         android:title="@string/configure_notification_settings"
         android:key="top_level_notifications"
         android:order="-120"
@@ -101,8 +96,7 @@
         settings:highlightableMenuKey="@string/menu_key_notifications"
         settings:layout="@layout/afterlab_cardview_middle" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_volume_up_24dp"
+    <Preference
         android:title="@string/sound_settings"
         android:key="top_level_sound"
         android:order="-110"
@@ -110,8 +104,7 @@
         settings:highlightableMenuKey="@string/menu_key_sound"
         settings:layout="@layout/afterlab_cardview_middle" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_display_white"
+    <Preference
         android:title="@string/display_settings"
         android:key="top_level_display"
         android:order="-100"
@@ -119,19 +112,17 @@
         settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_display"
         settings:layout="@layout/afterlab_cardview_middle" />
-	
-	<com.android.settings.widget.RestrictedHomepagePreference
-        android:icon="@drawable/ic_settings_wallpaper_white"
+
+    <com.android.settings.widget.RestrictedHomepagePreference
         android:key="top_level_wallpaper"
         android:order="-90"
         android:title="@string/wallpaper_settings_title"
         android:summary="@string/wallpaper_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_wallpaper"
-		settings:layout="@layout/afterlab_cardview_bottom"
+        settings:layout="@layout/afterlab_cardview_bottom"
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_battery_white"
+    <Preference
         android:title="@string/power_usage_summary_title"
         android:key="top_level_battery"
         android:summary="@string/summary_placeholder"
@@ -141,8 +132,7 @@
         settings:highlightableMenuKey="@string/menu_key_battery"
         settings:layout="@layout/afterlab_cardview_top" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_storage_white"
+    <Preference
         android:title="@string/storage_settings"
         android:key="top_level_storage"
         android:summary="@string/summary_placeholder"
@@ -152,8 +142,7 @@
         settings:highlightableMenuKey="@string/menu_key_storage"
         settings:layout="@layout/afterlab_cardview_bottom" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_accessibility"
+    <Preference
         android:title="@string/accessibility_settings"
         android:key="top_level_accessibility"
         android:order="-60"
@@ -162,8 +151,7 @@
         settings:highlightableMenuKey="@string/menu_key_accessibility"
         settings:layout="@layout/afterlab_cardview_top" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_safety_center"
+    <Preference
         android:title="@string/safety_center_title"
         android:key="top_level_safety_center"
         android:order="-55"
@@ -171,8 +159,7 @@
         settings:highlightableMenuKey="@string/menu_key_safety_center"
         settings:layout="@layout/afterlab_cardview_middle" />
         
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_security_white"
+    <Preference
         android:title="@string/security_settings_title"
         android:key="top_level_security"
         android:order="-50"
@@ -181,8 +168,7 @@
         settings:highlightableMenuKey="@string/menu_key_security"
         settings:layout="@layout/afterlab_cardview_middle" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_privacy"
+    <Preference
         android:title="@string/privacy_dashboard_title"
         android:key="top_level_privacy"
         android:order="-40"
@@ -191,8 +177,7 @@
         settings:highlightableMenuKey="@string/menu_key_privacy"
         settings:layout="@layout/afterlab_cardview_middle" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_location"
+    <Preference
         android:title="@string/location_settings_title"
         android:key="top_level_location"
         android:summary="@string/location_settings_loading_app_permission_stats"
@@ -202,8 +187,7 @@
         settings:highlightableMenuKey="@string/menu_key_location"
         settings:layout="@layout/afterlab_cardview_bottom" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_emergency"
+    <Preference
         android:title="@string/emergency_settings_preference_title"
         android:key="top_level_emergency"
         android:order="-20"
@@ -212,16 +196,14 @@
         settings:isPreferenceVisible="@bool/config_show_emergency_settings"
         settings:layout="@layout/afterlab_cardview_top" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_accounts"
+    <Preference
         android:title="@string/account_dashboard_title"
         android:key="top_level_accounts"
         android:order="-10"
         android:fragment="com.android.settings.accounts.AccountDashboardFragment"
         settings:layout="@layout/afterlab_cardview_middle" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_system_dashboard_white"
+    <Preference
         android:title="@string/header_category_system"
         android:key="top_level_system"
         android:order="10"
@@ -229,8 +211,7 @@
         settings:highlightableMenuKey="@string/menu_key_system"
         settings:layout="@layout/afterlab_cardview_bottom" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_help"
+    <Preference
         android:title="@string/page_tab_title_support"
         android:key="top_level_support"
         android:summary="@string/support_summary"

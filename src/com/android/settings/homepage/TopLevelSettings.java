@@ -472,7 +472,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 	             com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
          }
 
-	 controller.done(context, true /* rebindActions */);
+	 controller.done(true /* rebindActions */);
    }
 
     @Override
