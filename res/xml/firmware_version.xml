@@ -11,16 +11,7 @@
         android:clickable="true"
         android:layout="@layout/afterlife_logo"
         android:key="afterlife_logo"
-        app:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeLogoController"/>
-
-    <!-- AfterLife Maintainer  -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/afterlife_maintainer"
-        android:title="@string/afterlife_maintainer"
-        android:key="afterlife_maintainer"
-        android:summary="@string/summary_placeholder"
-        app:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeMaintainerController"
-        app:enableCopying="true"/>
+        app:controller="com.android.settings.deviceinfo.firmwareversion.afterlifeLogoController" />
 
     <!-- Android version -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -33,7 +24,7 @@
         app:enableCopying="true"
         app:searchable="false"
         app:showDividerBottom="true"
-        app:showDividerRight="true"/>
+        app:showDividerRight="true" />
 
     <!-- AfterLife version -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -46,7 +37,7 @@
         app:enableCopying="true"
         app:searchable="false"
         app:showDividerBottom="true"
-        app:showDividerRight="false"/>
+        app:showDividerRight="false" />
 
     <!-- Security patch -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -57,19 +48,18 @@
         app:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"
         app:enableCopying="true"
         app:showDividerBottom="true"
-        app:showDividerRight="true"/>
+        app:showDividerRight="true" />
 
     <!-- Mainline module version -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
         android:title="@string/module_version"
         android:key="module_version"
-        android:summary="@string/summary_placeholder"
+        android:summary="13"
         app:cardRight="true"
         app:cardType="middle"
-        app:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"
         app:enableCopying="true"
         app:showDividerBottom="true"
-        app:showDividerRight="false"/>
+        app:showDividerRight="false" />
 
     <!-- Kernel -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -81,7 +71,7 @@
         app:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"
         app:enableCopying="true"
         app:showDividerBottom="true"
-        app:showDividerRight="true"/>
+        app:showDividerRight="true" />
 
     <!-- Build -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -94,7 +84,7 @@
         app:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"
         app:enableCopying="true"
         app:showDividerBottom="true"
-        app:showDividerRight="false"/>
+        app:showDividerRight="false" />
 
     <!-- Baseband -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -108,7 +98,7 @@
         app:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"
         app:enableCopying="true"
         app:showDividerBottom="false"
-        app:showDividerRight="true"/>
+        app:showDividerRight="true" />
 
     <!-- SELinux -->
     <declan.prjct.settings.aboutphone.AfterlifePreference
@@ -121,5 +111,5 @@
         app:controller="com.android.settings.deviceinfo.firmwareversion.SelinuxStatusPreferenceController"
         app:enableCopying="false"
         app:showDividerBottom="false"
-        app:showDividerRight="false"/>
+        app:showDividerRight="false" />
 </PreferenceScreen>

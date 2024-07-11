@@ -91,6 +91,7 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
             multiSimPreference.setOrder(phonePreferenceOrder + simSlotNumber);
             multiSimPreference.setKey(KEY_PHONE_NUMBER + simSlotNumber);
             category.addPreference(multiSimPreference);
+            multiSimPreference.setLayoutResource(R.layout.about_card_preference_bottom);
             mPreferenceList.add(multiSimPreference);
         }
     }
