@@ -103,10 +103,9 @@ public class SimStatusPreferenceController extends BasePreferenceController {
 
         // Add additional preferences for each sim in the device
         for (int simSlotNumber = 0; simSlotNumber < mSlotSimStatus.size(); simSlotNumber++) {
-            final Preference multiSimPreference = createNewPreference(screen.getContext());
+            final Preference multiSimPreference = createNewPreference(screen.getContext(), (simSlotNumber + 1));
             multiSimPreference.setOrder(mSlotSimStatus.getPreferenceOrdering(simSlotNumber));
             multiSimPreference.setKey(mSlotSimStatus.getPreferenceKey(simSlotNumber));
-            multiSimPreference.setLayoutResource(R.layout.about_card_preference_middle);
             category.addPreference(multiSimPreference);
         }
     }
@@ -178,8 +177,16 @@ public class SimStatusPreferenceController extends BasePreferenceController {
     }
 
     @VisibleForTesting
-    Preference createNewPreference(Context context) {
-        return new Preference(context);
+    Preference createNewPreference(Context context, int simSlotNumber) {
+        Preference pref = new Preference(context);
+
+        if (simSlotNumber > 1) {
+            pref.setLayoutResource(R.layout.about_card_preference_middle);
+        } else {
+            pref.setLayoutResource(R.layout.about_card_preference_top);
+        }
+
+        return pref;
     }
 
     @Override

@@ -98,12 +98,11 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
 
         // Add additional preferences for each imei slot in the device
         for (int simSlotNumber = 0; simSlotNumber < mSlotSimStatus.size(); simSlotNumber++) {
-            Preference multiImeiPreference = createNewPreference(screen.getContext());
+            Preference multiImeiPreference = createNewPreference(screen.getContext(), (simSlotNumber + 1));
             multiImeiPreference.setOrder(imeiPreferenceOrder + 1 + simSlotNumber);
             multiImeiPreference.setKey(DEFAULT_KEY + (1 + simSlotNumber));
             multiImeiPreference.setEnabled(true);
             multiImeiPreference.setCopyingEnabled(true);
-            multiImeiPreference.setLayoutResource(R.layout.about_card_preference_bottom);
             category.addPreference(multiImeiPreference);
        }
     }
@@ -198,7 +197,14 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
     }
 
     @VisibleForTesting
-    Preference createNewPreference(Context context) {
-        return new PhoneNumberSummaryPreference(context);
+    Preference createNewPreference(Context context, int simSlotNumber) {
+        PhoneNumberSummaryPreference pref = new PhoneNumberSummaryPreference(context);
+        if (simSlotNumber < mSlotSimStatus.size()) {
+            pref.setLayoutResource(R.layout.about_card_preference_middle);
+        } else {
+            pref.setLayoutResource(R.layout.about_card_preference_bottom);
+        }
+
+        return pref;
     }
 }

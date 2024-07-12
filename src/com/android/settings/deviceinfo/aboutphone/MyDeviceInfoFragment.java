@@ -176,11 +176,6 @@ public class MyDeviceInfoFragment extends DashboardFragment
             }
         }
 
-        EidStatus eidStatus = new EidStatus(slotSimStatus, context, executor);
-        SimEidPreferenceController simEid = new SimEidPreferenceController(context, KEY_EID_INFO);
-        simEid.init(slotSimStatus, eidStatus);
-        controllers.add(simEid);
-
         if (executor != null) {
             executor.shutdown();
         }
@@ -201,7 +196,9 @@ public class MyDeviceInfoFragment extends DashboardFragment
                 getPreferenceScreen().findPreference(KEY_MY_DEVICE_INFO_HEADER);
         final boolean shouldDisplayHeader = getContext().getResources().getBoolean(
                 R.bool.config_show_device_header_in_device_info);
-        headerPreference.setVisible(shouldDisplayHeader);
+        if (headerPreference != null) {
+            headerPreference.setVisible(shouldDisplayHeader);
+        }
         if (!shouldDisplayHeader) {
             return;
         }
