@@ -49,6 +49,8 @@ public class AfxVersionDetailPreferenceController extends BasePreferenceControll
     private static final String KEY_AFTERLIFE_DEVICE_PROP = "ro.product.device";
     private static final String KEY_AFTERLIFE_BUILDTYPE_PROP = "ro.afterlife.releasetype";
     private static final String KEY_AFTERLIFE_BUILDVER_PROP = "ro.afterlife.version";
+    private static final String KEY_AFTERLIFE_EXTRA_PROP = "ro.afterlife.version.extra";
+    private static final String KEY_AOSP_RELEASE_PROP = "ro.build.version.release";
 
     private static final String PLATLOGO_PACKAGE_NAME = "com.android.egg";
     private static final String PLATLOGO_ACTIVITY_CLASS =
@@ -96,8 +98,7 @@ public class AfxVersionDetailPreferenceController extends BasePreferenceControll
             preference.setSummary(shortRomVersion());
             fullRomVersion = false;
         } else {
-            preference.setSummary(SystemProperties.get(KEY_AFTERLIFE_BUILDVER_PROP,
-                mContext.getString(R.string.unknown)));
+            preference.setSummary(showVersionExtra());
             fullRomVersion = true;
         }
         if (Utils.isMonkeyRunning()) {
@@ -137,6 +138,17 @@ public class AfxVersionDetailPreferenceController extends BasePreferenceControll
                 //this.mContext.getString(R.string.device_info_default));
         String shortVersion = romVernumb + " | " + romVermod;
         return shortVersion;
+    }
+
+    private String showVersionExtra() {
+        String aospVer =  SystemProperties.get(KEY_AOSP_RELEASE_PROP,
+                this.mContext.getString(R.string.device_info_default));
+        String aflExtra =  SystemProperties.get(KEY_AFTERLIFE_EXTRA_PROP,
+                this.mContext.getString(R.string.device_info_default));
+
+        String versionExtra = aospVer + " | " + aflExtra;
+
+        return versionExtra;
     }
 
     /**
