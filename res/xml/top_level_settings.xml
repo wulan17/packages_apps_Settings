@@ -68,7 +68,8 @@
         android:key="tether_settings"
         android:summary="@string/summary_placeholder"
         android:order="-160"
-        android:fragment="com.android.settings.TetherSettings"
+        android:fragment="com.android.settings.network.tether.TetherSettings"
+        settings:controller="com.android.settings.network.TetherPreferenceController"
         settings:layout="@layout/afterlab_cardview_middle" />
 
     <Preference
