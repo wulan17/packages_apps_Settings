@@ -55,7 +55,8 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
-           "AfterLab/src/**/*.java",
+        "AfterLab/src/**/*.java",
+        "AfterLab/src/**/*.kt",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
