@@ -54,7 +54,7 @@
     <declan.prjct.settings.aboutphone.AfterlifePreference
         android:title="@string/module_version"
         android:key="module_version"
-        android:summary="13"
+        android:summary="14"
         app:cardRight="true"
         app:cardType="middle"
         app:enableCopying="true"
