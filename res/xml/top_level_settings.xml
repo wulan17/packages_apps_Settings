@@ -48,7 +48,7 @@
         android:fragment="com.afterlife.afterlab.CustomizeDashboard"
         settings:controller="com.afterlife.afterlab.TopLevelExtensionsEntryPreferenceController" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:title="Airplane mode"
         android:key="airplane_mode"
         android:order="-180"

@@ -128,7 +128,7 @@
             settings:keywords="@string/keywords_auto_rotate"
             settings:controller="com.android.settings.display.AutoRotatePreferenceController"/>
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:key="enable_blurs_on_windows"
             android:title="@string/window_blurs"/>
 
