@@ -23,7 +23,7 @@ import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -43,13 +43,13 @@ public class ButtonNavigationSettingsFragment extends DashboardFragment {
 
     private static final String KEY_NAVBAR_INVERT = "sysui_nav_bar_inverse";
 
-    private SwitchPreference mNavbarInvertPref;
+    private SwitchPreferenceCompat mNavbarInvertPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SwitchPreference navbarInvertPref = (SwitchPreference) findPreference(KEY_NAVBAR_INVERT);
+        SwitchPreferenceCompat navbarInvertPref = (SwitchPreferenceCompat) findPreference(KEY_NAVBAR_INVERT);
         final Bundle arguments = getArguments();
         if (arguments != null) {
             final String key = arguments.getString(SystemNavigationGestureSettings.KEY_SYSTEM_NAV);
