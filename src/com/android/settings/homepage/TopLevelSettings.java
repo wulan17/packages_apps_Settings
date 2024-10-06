@@ -252,80 +252,82 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
             if (key.equals("top_level_usercard")){
                 preference.setLayoutResource(R.layout.preference_usercard);
-            }
+            } else
 	        if (key.equals("top_level_about_device")){
 	        preference.setLayoutResource(R.layout.afterlab_cardview_single_left);
-	        }
+	        } else
             if (key.equals("top_level_afterlab")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_single_right);
-            }
+            } else
             if (key.equals("airplane_mode")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top_switch);
-            }
+            } else
             if (key.equals("internet_settings")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("tether_settings")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_connected_devices")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            }
+            } else
             if (key.equals("top_level_apps")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            }
+            } else
             if (key.equals("top_level_notifications")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_sound")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_display")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_wallpaper")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            }
+            } else
             if (key.equals("top_level_battery")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            }
+            } else
             if (key.equals("top_level_storage")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-			}
+			} else
             if (key.equals("top_level_accessibility")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            }
+            } else
             if (key.equals("top_level_security")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_privacy")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-			}
+			} else
             if (key.equals("top_level_location")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            }
+            } else
             if (key.equals("top_level_emergency")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            }
+            } else
             if (key.equals("top_level_accounts")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_system")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            }
+            } else
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_google")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
+            } else
             if (key.equals("top_level_wellbeing")){
+                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+            } else {
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
             }
 	    }
