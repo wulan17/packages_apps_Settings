@@ -69,5 +69,6 @@ public final class EnableBlursPreferenceController extends AbstractPreferenceCon
     public void updateState(Preference preference) {
         boolean isEnabled = Settings.Global.getInt(mContext.getContentResolver(),
                     Settings.Global.DISABLE_WINDOW_BLURS, 0) == 0;
+		    ((TwoStatePreference) preference).setChecked(isEnabled);
     }
 }
