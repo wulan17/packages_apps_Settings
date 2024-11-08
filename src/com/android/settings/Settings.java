@@ -492,4 +492,6 @@ public class Settings extends SettingsActivity {
 
     // AfterLab Additions.
     public static class AfterlabSettingsActivity extends SettingsActivity {}
+
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
