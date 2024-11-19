@@ -301,4 +301,10 @@
     <string name="settings_random5">Search settings</string>
     <string name="settings_random6">You cant find something that doesnt exists!</string>
     <string name="default_user">Hi, user!</string>
+
+    <!-- restart settings dialog -->
+    <string name="restart_settings_message">For all changes to take effect, a Settings restart is required. Restart Settings now?</string>
+    <string name="restart_settings_title">Settings restart required</string>
+    <string name="restart_systemui_message">For all changes to take effect, a SystemUi restart is required. Restart SystemUi now?</string>
+    <string name="restart_systemui_title">SystemUi restart required</string>
 </resources>
