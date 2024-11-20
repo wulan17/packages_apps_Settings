@@ -13,19 +13,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
-    <path
-        android:pathData="M3,15V9H7L12,4V20L7,15H3ZM10,15.17V8.83L7.83,11H5V13H7.83L10,15.17Z"
-        android:fillType="evenOdd"
-        android:fillColor="?android:attr/colorAccent"/>
-    <path
-        android:pathData="M16.5,12C16.5,10.23 15.48,8.71 14,7.97V16.02C15.48,15.29 16.5,13.77 16.5,12Z"
-        android:fillColor="?android:attr/colorAccent"/>
-    <path
-        android:pathData="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18.01,19.86 21,16.28 21,12C21,7.72 18.01,4.14 14,3.23Z"
-        android:fillColor="?android:attr/colorAccent"/>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:pathData="M15.87,13.76Q16.22,13.41,16.41,12.95Q16.60,12.49,16.60,12.00Q16.60,11.51,16.41,11.05Q16.22,10.59,15.87,10.24" android:strokeColor="#ff000000" android:strokeWidth="2.0" android:strokeLineCap="round" />
+    <path android:pathData="M18.31,18.51Q19.59,17.22,20.30,15.53Q21.00,13.83,21.00,12.00Q21.00,10.17,20.30,8.47Q19.59,6.78,18.31,5.49" android:strokeColor="#50000000" android:strokeWidth="2.0" android:strokeLineCap="round" />
+    <path android:pathData="M12.16,8.66C12.15,7.65,11.70,6.89,11.23,6.42C10.75,5.95,9.99,5.49,8.98,5.49C7.97,5.49,7.21,5.95,6.74,6.42L4.30,8.85C3.64,9.51,3.00,10.59,3.00,12.00C3.00,13.41,3.64,14.49,4.30,15.15L6.74,17.58C7.21,18.05,7.97,18.51,8.98,18.51C9.99,18.51,10.75,18.05,11.23,17.58C11.70,17.11,12.15,16.35,12.16,15.34z" android:strokeColor="#ff000000" android:strokeWidth="2.0" />
 </vector>

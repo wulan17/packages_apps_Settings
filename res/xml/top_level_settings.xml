@@ -34,7 +34,7 @@
         android:title="@string/about_settings"
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_about_device"
-        settings:layout="@layout/afterlab_cardview_single_left"
+        settings:layout="@layout/afterlife_cardview_single_left"
         settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
@@ -43,7 +43,7 @@
         android:summary="@string/build_tweaks_summary_title"
         android:icon="@drawable/ic_settings_afterlab"
         android:order="-200"
-        settings:layout="@layout/afterlab_cardview_single_right"
+        settings:layout="@layout/afterlife_cardview_single_right"
         settings:highlightableMenuKey="@string/menu_key_afterlab"
         android:fragment="com.afterlife.afterlab.CustomizeDashboard"
         settings:controller="com.afterlife.afterlab.TopLevelExtensionsEntryPreferenceController" />
@@ -53,7 +53,7 @@
         android:key="airplane_mode"
         android:order="-180"
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
-        settings:layout="@layout/afterlab_cardview_top_switch" />
+        settings:layout="@layout/afterlife_cardview_top_switch" />
 
     <Preference
         android:title="Connectivity"
@@ -61,7 +61,7 @@
         android:summary="@string/summary_placeholder"
         android:order="-180"
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="Portable hotspot"
@@ -70,7 +70,7 @@
         android:order="-160"
         android:fragment="com.android.settings.network.tether.TetherSettings"
         settings:controller="com.android.settings.network.TetherPreferenceController"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/connected_devices_dashboard_title"
@@ -79,7 +79,7 @@
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
-        settings:layout="@layout/afterlab_cardview_bottom" />
+        settings:layout="@layout/afterlife_cardview_bottom" />
 
     <Preference
         android:title="@string/apps_dashboard_title"
@@ -87,7 +87,7 @@
         android:order="-130"
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         settings:highlightableMenuKey="@string/menu_key_apps"
-        settings:layout="@layout/afterlab_cardview_top" />
+        settings:layout="@layout/afterlife_cardview_top" />
 
     <Preference
         android:title="@string/configure_notification_settings"
@@ -95,7 +95,7 @@
         android:order="-120"
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         settings:highlightableMenuKey="@string/menu_key_notifications"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/sound_settings"
@@ -103,7 +103,7 @@
         android:order="-110"
         android:fragment="com.android.settings.notification.SoundSettings"
         settings:highlightableMenuKey="@string/menu_key_sound"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/display_settings"
@@ -112,7 +112,7 @@
         android:fragment="com.android.settings.DisplaySettings"
         settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_display"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <com.android.settings.widget.RestrictedHomepagePreference
         android:key="top_level_wallpaper"
@@ -120,7 +120,7 @@
         android:title="@string/wallpaper_settings_title"
         android:summary="@string/wallpaper_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_wallpaper"
-        settings:layout="@layout/afterlab_cardview_bottom"
+        settings:layout="@layout/afterlife_cardview_bottom"
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
 
     <Preference
@@ -131,7 +131,7 @@
         android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageSummary"
         settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_battery"
-        settings:layout="@layout/afterlab_cardview_top" />
+        settings:layout="@layout/afterlife_cardview_top" />
 
     <Preference
         android:title="@string/storage_settings"
@@ -141,7 +141,7 @@
         android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
         settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"
         settings:highlightableMenuKey="@string/menu_key_storage"
-        settings:layout="@layout/afterlab_cardview_bottom" />
+        settings:layout="@layout/afterlife_cardview_bottom" />
 
     <Preference
         android:title="@string/accessibility_settings"
@@ -150,7 +150,7 @@
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
         settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_accessibility"
-        settings:layout="@layout/afterlab_cardview_top" />
+        settings:layout="@layout/afterlife_cardview_top" />
 
     <Preference
         android:title="@string/safety_center_title"
@@ -158,7 +158,7 @@
         android:order="-55"
         settings:controller="com.android.settings.safetycenter.TopLevelSafetyCenterEntryPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_safety_center"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
         
     <Preference
         android:title="@string/security_settings_title"
@@ -167,7 +167,7 @@
         android:fragment="com.android.settings.security.SecuritySettings"
         settings:controller="com.android.settings.security.TopLevelSecurityEntryPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_security"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/privacy_dashboard_title"
@@ -176,7 +176,7 @@
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"
         settings:controller="com.android.settings.privacy.TopLevelPrivacyEntryPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_privacy"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/location_settings_title"
@@ -186,7 +186,7 @@
         android:fragment="com.android.settings.location.LocationSettings"
         settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_location"
-        settings:layout="@layout/afterlab_cardview_bottom" />
+        settings:layout="@layout/afterlife_cardview_bottom" />
 
     <Preference
         android:title="@string/emergency_settings_preference_title"
@@ -195,14 +195,14 @@
         android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"
         settings:highlightableMenuKey="@string/menu_key_emergency"
         settings:isPreferenceVisible="@bool/config_show_emergency_settings"
-        settings:layout="@layout/afterlab_cardview_top" />
+        settings:layout="@layout/afterlife_cardview_top" />
 
     <Preference
         android:title="@string/account_dashboard_title"
         android:key="top_level_accounts"
         android:order="-10"
         android:fragment="com.android.settings.accounts.AccountDashboardFragment"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlife_cardview_middle" />
 
     <Preference
         android:title="@string/header_category_system"
@@ -210,7 +210,7 @@
         android:order="10"
         android:fragment="com.android.settings.system.SystemDashboardFragment"
         settings:highlightableMenuKey="@string/menu_key_system"
-        settings:layout="@layout/afterlab_cardview_bottom" />
+        settings:layout="@layout/afterlife_cardview_bottom" />
 
     <Preference
         android:title="@string/page_tab_title_support"

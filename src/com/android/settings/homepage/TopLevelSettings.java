@@ -68,6 +68,9 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 import com.android.settings.widget.EntityHeaderController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements SplitLayoutListener,
         PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
@@ -100,8 +103,16 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.top_level_settings;
+        if (declanXafterlifeStyle() == 1) {
+			return R.xml.top_level_settings_second;
+		} else {
+			return R.xml.top_level_settings;
+		}
     }
+    
+    private int declanXafterlifeStyle() {
+		return Settings.System.getInt(getContentResolver(), "afl_dashboard_style", 0);
+	}
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -243,95 +254,86 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     }
 
     private void onSetPrefCard() {
-	final PreferenceScreen screen = getPreferenceScreen();
-        final int count = screen.getPreferenceCount();
-        for (int i = 0; i < count; i++) {
-            final Preference preference = screen.getPreference(i);
+    final PreferenceScreen screen = getPreferenceScreen();
+    final int count = screen.getPreferenceCount();
+    
+    // Mapping key to layouts
+    Map<String, Integer> layoutMapStyle0 = new HashMap<>();
+    layoutMapStyle0.put("top_level_usercard", R.layout.preference_usercard);
+    layoutMapStyle0.put("top_level_about_device", R.layout.afterlife_cardview_single_left);
+    layoutMapStyle0.put("top_level_afterlab", R.layout.afterlife_cardview_single_right);
+    layoutMapStyle0.put("airplane_mode", R.layout.afterlife_cardview_top_switch);
+    layoutMapStyle0.put("internet_settings", R.layout.afterlife_cardview_middle);
+    layoutMapStyle0.put("tether_settings", R.layout.afterlife_cardview_middle);
+    layoutMapStyle0.put("top_level_connected_devices", R.layout.afterlife_cardview_bottom);
+    layoutMapStyle0.put("top_level_apps", R.layout.afterlife_cardview_top);
+	layoutMapStyle0.put("top_level_notifications", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_sound", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_display", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_wallpaper", R.layout.afterlife_cardview_bottom);
+	layoutMapStyle0.put("top_level_battery", R.layout.afterlife_cardview_top);
+	layoutMapStyle0.put("top_level_storage", R.layout.afterlife_cardview_bottom);
+	layoutMapStyle0.put("top_level_accessibility", R.layout.afterlife_cardview_top);
+	layoutMapStyle0.put("top_level_security", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_privacy", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_location", R.layout.afterlife_cardview_bottom);
+	layoutMapStyle0.put("top_level_emergency", R.layout.afterlife_cardview_top);
+	layoutMapStyle0.put("top_level_accounts", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_system", R.layout.afterlife_cardview_bottom);
+	layoutMapStyle0.put("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_google", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity", R.layout.afterlife_cardview_middle);
+	layoutMapStyle0.put("top_level_wellbeing", R.layout.afterlife_cardview_middle);
 
- 	    String key = preference.getKey();
+    Map<String, Integer> layoutMapStyle1 = new HashMap<>();
+    layoutMapStyle1.put("airplane_mode", R.layout.afterlife_card_homepage_top_switch);
+    layoutMapStyle1.put("internet_settings", R.layout.afterlife_card_homepage_middle);
+    layoutMapStyle1.put("tether_settings", R.layout.afterlife_card_homepage_middle);
+    layoutMapStyle1.put("top_level_connected_devices", R.layout.afterlife_card_homepage_bottom);
+	layoutMapStyle1.put("top_level_apps", R.layout.afterlife_card_homepage_top);
+	layoutMapStyle1.put("top_level_notifications", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_sound", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_display", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_wallpaper", R.layout.afterlife_card_homepage_bottom);
+	layoutMapStyle1.put("top_level_battery", R.layout.afterlife_card_homepage_top);
+	layoutMapStyle1.put("top_level_storage", R.layout.afterlife_card_homepage_bottom);
+	layoutMapStyle1.put("top_level_accessibility", R.layout.afterlife_card_homepage_top);
+	layoutMapStyle1.put("top_level_security", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_privacy", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_location", R.layout.afterlife_card_homepage_bottom);
+	layoutMapStyle1.put("top_level_emergency", R.layout.afterlife_card_homepage_top);
+	layoutMapStyle1.put("top_level_accounts", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_system", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_about_settings", R.layout.afterlife_card_homepage_bottom);
+	layoutMapStyle1.put("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_google", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity", R.layout.afterlife_card_homepage_middle);
+	layoutMapStyle1.put("top_level_wellbeing", R.layout.afterlife_card_homepage_middle);
+	
 
-            if (key.equals("top_level_usercard")){
-                preference.setLayoutResource(R.layout.preference_usercard);
-            } else
-	        if (key.equals("top_level_about_device")){
-	        preference.setLayoutResource(R.layout.afterlab_cardview_single_left);
-	        } else
-            if (key.equals("top_level_afterlab")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_single_right);
-            } else
-            if (key.equals("airplane_mode")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top_switch);
-            } else
-            if (key.equals("internet_settings")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("tether_settings")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_connected_devices")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            } else
-            if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            } else
-            if (key.equals("top_level_notifications")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_sound")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_display")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_wallpaper")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            } else
-            if (key.equals("top_level_battery")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            } else
-            if (key.equals("top_level_storage")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-			} else
-            if (key.equals("top_level_accessibility")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            } else
-            if (key.equals("top_level_security")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_privacy")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-			} else
-            if (key.equals("top_level_location")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            } else
-            if (key.equals("top_level_emergency")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
-            } else
-            if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_system")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
-            } else
-            if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_google")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else
-            if (key.equals("top_level_wellbeing")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            } else {
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
-            }
-	    }
+    int defaultLayoutStyle0 = R.layout.afterlife_cardview_middle;
+    int defaultLayoutStyle1 = R.layout.afterlife_card_homepage_middle;
+
+    for (int i = 0; i < count; i++) {
+        final Preference preference = screen.getPreference(i);
+        String key = preference.getKey();
+
+        if (declanXafterlifeStyle() == 0) {
+            // Get layout for style 0 or fallback to default
+            int layout = layoutMapStyle0.getOrDefault(key, defaultLayoutStyle0);
+            preference.setLayoutResource(layout);
+        } else if (declanXafterlifeStyle() == 1) {
+            // Get layout for style 1 or fallback to default
+            int layout = layoutMapStyle1.getOrDefault(key, defaultLayoutStyle1);
+            preference.setLayoutResource(layout);
+        } else {
+            // Fallback for unknown styles
+            preference.setLayoutResource(defaultLayoutStyle0);
+        }
     }
+}
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -362,7 +364,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 savedInstanceState);
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
 		layoutManager.setSpanSizeLookup(new DeclanSpanSizeOP());
-		recyclerView.setLayoutManager(layoutManager);
+		if (declanXafterlifeStyle() == 0) {
+			recyclerView.setLayoutManager(layoutManager);
+		}
         return recyclerView;
     }
 
@@ -453,39 +457,41 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     }
 
     private void onUserCard() {
-        final LayoutPreference headerPreference =
-                (LayoutPreference) getPreferenceScreen().findPreference(KEY_USER_CARD);
-        final View userCard = headerPreference.findViewById(R.id.entity_header);
-        final TextView textview = headerPreference.findViewById(R.id.summary);
-        final Activity context = getActivity(); final Bundle bundle = getArguments();
-        final EntityHeaderController controller = EntityHeaderController
-                .newInstance(context, this, userCard)
-                .setRecyclerView(getListView(), getSettingsLifecycle())
-                .setButtonActions(EntityHeaderController.ActionType.ACTION_NONE,
-                        EntityHeaderController.ActionType.ACTION_NONE);
+        if (declanXafterlifeStyle() == 0) {
+            final LayoutPreference headerPreference =
+                    (LayoutPreference) getPreferenceScreen().findPreference(KEY_USER_CARD);
+            final View userCard = headerPreference.findViewById(R.id.entity_header);
+            final TextView textview = headerPreference.findViewById(R.id.summary);
+            final Activity context = getActivity(); final Bundle bundle = getArguments();
+            final EntityHeaderController controller = EntityHeaderController
+                    .newInstance(context, this, userCard)
+                    .setRecyclerView(getListView(), getSettingsLifecycle())
+                    .setButtonActions(EntityHeaderController.ActionType.ACTION_NONE,
+                            EntityHeaderController.ActionType.ACTION_NONE);
 
-         userCard.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                   Intent intent = new Intent(Intent.ACTION_MAIN);
-                   intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
-                   startActivity(intent);
+            userCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                    startActivity(intent);
 
-             }
-         });
+                }
+            });
 
-         final int iconId = bundle.getInt("icon_id", 0);
-         if (iconId == 0) {
-            final UserManager userManager = (UserManager) getActivity().getSystemService(
-		     Context.USER_SERVICE);
-	    final UserInfo info = Utils.getExistingUser(userManager,
-		     android.os.Process.myUserHandle());
-	    controller.setLabel(info.name);
-	    controller.setIcon(
-	             com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
-         }
+            final int iconId = bundle.getInt("icon_id", 0);
+            if (iconId == 0) {
+                final UserManager userManager = (UserManager) getActivity().getSystemService(
+                    Context.USER_SERVICE);
+                final UserInfo info = Utils.getExistingUser(userManager,
+                    android.os.Process.myUserHandle());
+                controller.setLabel(info.name);
+                controller.setIcon(
+                    com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
+            }
 
-	 controller.done(true /* rebindActions */);
+            controller.done(true /* rebindActions */);
+        }    
    }
 
     @Override

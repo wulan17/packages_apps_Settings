@@ -13,16 +13,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
-    <path
-        android:pathData="M5,9C5,5.13 8.13,2 12,2C15.87,2 19,5.13 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9ZM12,4C9.24,4 7,6.24 7,9C7,11.85 9.92,16.21 12,18.88C14.12,16.19 17,11.88 17,9C17,6.24 14.76,4 12,4Z"
-        android:fillType="evenOdd"
-        android:fillColor="?android:attr/colorAccent"/>
-    <path
-        android:pathData="M12,11.5C13.381,11.5 14.5,10.381 14.5,9C14.5,7.619 13.381,6.5 12,6.5C10.619,6.5 9.5,7.619 9.5,9C9.5,10.381 10.619,11.5 12,11.5Z"
-        android:fillColor="?android:attr/colorAccent"/>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00ffffff" android:pathData="M17.48,15.61C18.18,14.35,18.89,13.09,19.34,11.68C19.78,10.27,19.97,8.70,19.34,7.06C18.71,5.42,17.26,3.71,15.58,2.84C13.90,1.96,11.99,1.93,10.17,2.27C8.35,2.61,6.62,3.32,5.38,5.10C4.14,6.87,3.39,9.72,4.56,12.68C5.73,15.64,8.82,18.73,11.92,21.82L14.73,19.01" android:strokeColor="#ff000000" android:strokeWidth="1.9114462" android:strokeLineCap="round" android:strokeLineJoin="round" android:fillType="nonZero" />
+    <path android:fillColor="#00ffffff" android:pathData="M11.92,6.12C13.58,6.12,14.92,7.47,14.92,9.12C14.92,10.78,13.58,12.13,11.92,12.13C10.26,12.13,8.92,10.78,8.92,9.12C8.92,7.47,10.26,6.12,11.92,6.12z" android:strokeColor="#50000000" android:strokeWidth="2.04" android:strokeLineCap="round" android:strokeLineJoin="round" android:fillType="nonZero" />
 </vector>

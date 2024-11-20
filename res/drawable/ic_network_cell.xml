@@ -14,13 +14,36 @@
     limitations under the License.
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:autoMirrored="true"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0"
-        android:tint="?android:attr/colorControlNormal">
+        android:tint="?android:colorControlHighlight" 
+		android:width="24.0dp"
+		android:height="24.0dp"
+		android:viewportWidth="24.0"
+		android:viewportHeight="24.0">
     <path
-        android:pathData="M20,7v13H7L20,7 M22,2L2,22h20V2L22,2z"
-        android:fillColor="#FFFFFFFF"/>
+        android:name="path_2"
+        android:pathData="M 14.496 2.422 C 15.09 2.305 15.734 2.605 16.02 3.137 C 16.262 3.555 16.191 4.051 16.199 4.508 C 16.195 9.523 16.195 14.535 16.199 19.551 C 16.191 20.027 16.262 20.555 15.984 20.977 C 15.66 21.523 14.949 21.793 14.34 21.598 C 13.75 21.426 13.313 20.844 13.324 20.227 C 13.316 14.953 13.328 9.68 13.32 4.406 C 13.328 4.004 13.277 3.57 13.473 3.199 C 13.664 2.797 14.059 2.5 14.496 2.422 Z M 14.496 2.422"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
+    <group android:name="group">
+        <path
+            android:name="path_3"
+            android:pathData="M 20.059 7.598 C 20.902 7.41 21.781 8.137 21.754 9.004 C 21.727 9.695 21.914 10.5 21.426 11.078 C 20.906 11.742 19.805 11.766 19.254 11.125 C 18.734 10.582 18.906 9.781 18.883 9.102 C 18.832 8.398 19.355 7.711 20.059 7.598 Z M 20.059 7.598"
+            android:fillColor="#50000000"
+            android:strokeWidth="1"/>
+    </group>
+    <path
+        android:name="path_4"
+        android:pathData="M 8.938 9.992 C 9.781 9.805 10.664 10.535 10.637 11.402 C 10.645 14.309 10.637 17.219 10.641 20.125 C 10.676 20.723 10.32 21.32 9.762 21.547 C 9.133 21.828 8.332 21.574 7.98 20.98 C 7.793 20.703 7.758 20.363 7.762 20.035 C 7.77 17.156 7.758 14.277 7.766 11.398 C 7.754 10.727 8.277 10.105 8.938 9.992 Z M 8.938 9.992"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
+    <path
+        android:name="path_5"
+        android:pathData="M 20.059 12.867 C 20.902 12.684 21.781 13.406 21.754 14.273 C 21.762 16.223 21.754 18.176 21.758 20.129 C 21.789 20.672 21.5 21.223 21.016 21.48 C 20.473 21.793 19.734 21.688 19.301 21.238 C 19.008 20.953 18.867 20.539 18.879 20.133 C 18.883 18.18 18.879 16.23 18.883 14.277 C 18.871 13.602 19.395 12.98 20.059 12.867 Z M 20.059 12.867"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
+    <path
+        android:name="path_6"
+        android:pathData="M 3.375 16.031 C 4.184 15.855 5.043 16.508 5.07 17.336 C 5.094 18.266 5.074 19.195 5.082 20.125 C 5.098 20.555 4.938 20.996 4.609 21.285 C 4.141 21.73 3.367 21.785 2.84 21.414 C 2.445 21.156 2.203 20.695 2.207 20.223 C 2.203 19.297 2.203 18.367 2.207 17.438 C 2.195 16.766 2.715 16.145 3.375 16.031 Z M 3.375 16.031"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
 </vector>
